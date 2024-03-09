@@ -1,0 +1,303 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    
+}
+
+/*------- cabeçalho------*/
+
+.cima{
+    background-image: linear-gradient(to bottom, rgba(128, 128, 128, 0.5), rgba(128, 128, 128, 0.5));
+    width: 100%;
+    max-width: 100%;
+   }
+
+.background{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    width: 100%;    
+    max-width: 100%;
+    height: 100vh;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1rem;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    position: fixed;
+    background: transparent;
+    transition: all .35s ease;
+    background-color: #fff;
+    padding: 14px 14%;
+}
+
+.logo{
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.cabeçalho-link{
+    display: flex;
+    gap: 3rem;
+}
+
+.cabeçalho-link a{
+    color: #111;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.cabeçalho-link a:hover{
+    color: #808000;
+}
+
+.icon span{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.icon span:hover{
+    color: #808000;
+}
+
+section{
+    padding-top: 7rem;
+}
+
+section h1{
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+
+}
+
+
+
+
+
+
+
+.product-images-wrapper {
+    display: flex;
+}
+
+.product-images-menu {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.product-thumbnail {
+    width: 100px; /* Aumenta a largura das miniaturas */
+    height: auto; /* Mantém a altura proporcional */
+    margin-bottom: -140px; /* Aumenta o espaço entre as miniaturas */
+    cursor: pointer;
+    border: 2px solid #ccc; /* Aumenta a espessura da borda */
+    border-radius: 10px; /* Aumenta o raio da borda */
+    margin-left: 330px;
+    margin-top: 150px;
+}
+
+.product-thumbnail.selected-thumbnail {
+    border-color: black; /* Altera a cor da borda para preto quando a miniatura é selecionada */
+}
+
+.product-image-main {
+    max-width: 100%; /* Ajusta a largura máxima da imagem principal */
+    max-height: 600px; /* Aumenta a altura máxima da imagem principal */
+    margin-bottom: 40px; /* Aumenta o espaço abaixo da imagem principal */
+    margin-top: 30px;
+    border: 2px solid #ccc; /* Adiciona uma borda semelhante à das miniaturas */
+    border-radius: 10px; /* Adiciona um leve arredondamento às bordas */
+    padding: 20px;
+    margin-left: 1%;
+    margin-top: 15%;
+}
+
+.product-thumbnail.selected-thumbnail {
+    border: 2px solid black;
+}
+
+.scroll-button {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #000;
+    z-index: 1; /* Garante que os botões de rolagem fiquem sobre as miniaturas */
+}
+
+.scroll-button:focus {
+    outline: none;
+}
+
+
+#scroll-down {
+    left: 50%; /* Coloca o botão de rolagem para baixo no meio horizontalmente */
+    bottom: 10px; /* Define a distância da parte inferior */
+    transform: translateX(-50%); /* Centraliza o botão de rolagem horizontalmente */
+}
+
+
+/*-------------- menu de vendas ------------*/
+
+.produto {
+    margin-left: 35%;
+}
+.product-details {
+    flex: 0 1 30%;
+    display: flex;
+    flex-direction: flex;
+    justify-content: flex;
+    align-items: flex;
+
+}
+
+.destaque-panel {
+ margin-top: 25%;
+ margin-left: 15%;
+}
+
+.destaque-images {
+    display: flex;
+    justify-content: space-between;
+}
+
+.destaque-images img {
+
+    width: 18%; /* Defina a largura desejada para as imagens */
+    height: auto; /* Mantenha a altura proporcional */
+    border: 0.15em  solid #ccc; /* Adicione uma borda com cor cinza */
+    border-radius: 5px; /* Adicione um leve arredondamento às bordas */
+    margin: 1%; /* Adicione uma margem para separar as imagens */
+}
+
+
+/*--------- BOX DO PREÇO ----------*/
+
+
+.product-details-box {
+    border: 0.15em solid #ccc; /* Adiciona uma borda fina */
+    border-radius: 10px; /* Adiciona um leve arredondamento às bordas */
+    padding: 6em; /* Adiciona espaço interno */
+    margin: 250px; /* Adiciona margem ao redor da caixa */
+    margin-top: -25%;
+    margin-left:55%;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column; /* Textos-empilhados-verticalmente */
+}
+
+.product-details h2 {
+    margin-bottom: 0.5em; /* Espaço-entre-título-e-a-descrição */
+}
+
+.product-details p {
+    margin-bottom: 1em; /* Espaço-entre-as-descrições */
+}
+
+.product-details p:last-child {
+    margin-bottom: 0; 
+}
+
+.product-details-price {
+    align-self: flex-end; /* Alinha-pra-direita */
+}
+
+.buy-button {
+    background-color: #000000; /* fundo */
+    color: #fff; /* Cor-do-botão */
+    border: none;
+    padding: 10px 20px; /*add-preenchimento-interno*/
+    border-radius: 5px; /* Adiciona um leve arredondamento às bordas */
+    cursor: pointer; /* Altera o cursor ao passar por cima */
+    transition: background-color 0.3s; /* Adiciona transição suave à cor de fundo */
+}
+
+.buy-button:hover {
+    background-color: #808000; /* Altera a cor de fundo ao passar por cima */
+}
+
+.price {
+    font-size: 1.2em; /* Aumenta o tamanho da fonte do preço */
+    font-weight: bold; /* Torna o preço em negrito */
+    color: #808000; /* Define a cor do preço */
+}
+.sale-price {
+    font-size: 1.1em; /* Ajuste o tamanho da fonte do preço em promoção */
+    color: #ff0000; /* Define a cor do preço em promoção */
+    text-decoration: line-through; /* Adiciona um risco sobre o preço original */
+}
+.prices {
+    display: flex; /* Usa flexbox para colocar os preços na mesma linha */
+    align-items: baseline; /* Alinha os preços pela base */
+}
+
+.price, .sale-price {
+    margin-right: 10px; /* Adiciona um espaço entre os preços */
+}
+
+/*--------- Roda pé ----------*/
+
+
+#Contato{
+    display: flex;
+    gap: 5rem;
+    justify-content: space-around;
+    background-color: #111;
+    padding: 8rem;
+    margin-top: 5rem;
+    display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+}
+
+.meio-contato h3{
+    color: #fff;
+    font-size: 23px;
+    margin-bottom: 1.6rem;
+}
+
+.meio-contato h5{
+    font-size: 15px;
+    font-weight: 600;
+    color: #555;
+}
+
+.meio-contato li{
+    margin-bottom: 15px;
+}
+
+.meio-contato li a{
+    display: block;
+    color: #555;
+    font-weight: 600;
+    transition: all .35s ease;
+}
+
+.last-text{
+    text-align: center;
+    background-color: #555;
+    color: #fff;
+}
+
+body {
+    background-color: #ffffff; 
+    background-size: cover;
+    background-position: center;
+    color: #000000;
+}
